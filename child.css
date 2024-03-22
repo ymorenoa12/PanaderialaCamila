@@ -1,0 +1,268 @@
+/* ----------------------------------------------------------------
+	Bootstrap Adjustments
+-----------------------------------------------------------------*/
+
+@media (prefers-reduced-motion: no-preference) {
+	:root {
+		scroll-behavior: auto;
+	}
+}
+
+@media (min-width: 576px) {
+	.card-columns {
+		-webkit-column-count: 3;
+		-moz-column-count: 3;
+		column-count: 3;
+		-webkit-column-gap: 1.25rem;
+		-moz-column-gap: 1.25rem;
+		column-gap: 1.25rem;
+		orphans: 1;
+		widows: 1;
+	}
+	.card-columns.grid-2 {
+		-webkit-column-count: 2;
+		-moz-column-count: 2;
+		column-count: 2;
+	}
+	.card-columns > * {
+		display: inline-block;
+		width: 100%;
+	}
+}
+
+.form-group {
+	margin-bottom: 1rem;
+}
+    /* ----------------------------------------------------------------
+	Basic
+-----------------------------------------------------------------*/
+
+dl, dt, dd, ol, ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+.clear {
+	clear: both;
+	display: block;
+	font-size: 0px;
+	height: 0px;
+	line-height: 0;
+	width: 100%;
+	overflow:hidden;
+}
+
+::selection {
+	background: #1ABC9C;
+	color: #FFF;
+	text-shadow: none;
+}
+
+::-moz-selection {
+	background: #1ABC9C; /* Firefox */
+	color: #FFF;
+	text-shadow: none;
+}
+
+::-webkit-selection {
+	background: #1ABC9C; /* Safari */
+	color: #FFF;
+	text-shadow: none;
+}
+
+:active,
+:focus { outline: none !important; }
+
+
+/* ----------------------------------------------------------------
+	Typography
+-----------------------------------------------------------------*/
+
+
+body {
+	line-height: 1.5;
+	color: #555;
+	font-family: 'Lato', sans-serif;
+}
+
+a {
+	text-decoration: none !important;
+	color: #1ABC9C;
+}
+
+a:hover { color: #222; }
+
+a img { border: none; }
+
+img { max-width: 100%; }
+
+iframe {
+	width: 100%;
+	border: 0 !important;
+	overflow: hidden !important;
+}
+
+/* ----------------------------------------------------------------
+	Basic Layout Styles
+-----------------------------------------------------------------*/
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #444;
+	font-weight: 600;
+	line-height: 1.5;
+	margin: 0 0 30px 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+h5,
+h6 { margin-bottom: 20px; }
+
+h1 { font-size: 36px; }
+
+h2 { font-size: 30px; }
+
+h3 { font-size: 1.5rem; }
+
+h4 { font-size: 18px; }
+
+h5 { font-size: 0.875rem; }
+
+h6 { font-size: 12px; }
+
+h4 { font-weight: 600; }
+
+h5,
+h6 { font-weight: bold; }
+
+@media (max-width: 767.98px) {
+
+	h1 {
+		font-size: 1.75rem;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+	}
+
+	h3 {
+		font-size: 1.25rem;
+	}
+
+	h4 {
+		font-size: 1rem;
+	}
+
+}
+
+h1 > span:not(.nocolor):not(.badge),
+h2 > span:not(.nocolor):not(.badge),
+h3 > span:not(.nocolor):not(.badge),
+h4 > span:not(.nocolor):not(.badge),
+h5 > span:not(.nocolor):not(.badge),
+h6 > span:not(.nocolor):not(.badge) { color: #1ABC9C; }
+
+p,
+pre,
+ul,
+ol,
+dl,
+dd,
+blockquote,
+address,
+table,
+fieldset,
+form { margin-bottom: 30px; }
+
+small { font-family: 'Lato', sans-serif; }
+
+
+@media (max-width: 1200px) {
+	.display-1 {
+		font-size: calc( 1.725rem + 5.7vw );
+	}
+	.display-2 {
+		font-size: calc( 1.675rem + 5.1vw );
+	}
+	.display-3 {
+		font-size: calc( 1.575rem + 3.9vw );
+	}
+	.display-4 {
+		font-size: calc( 1.475rem + 2.7vw );
+	}
+}
+
+
+
+
+
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-item {
+    display: inline-block;
+    position: relative;
+}
+
+.menu-link {
+    color: black;
+    text-decoration: none; /* Elimina cualquier subrayado en el enlace */
+    font-size: 20px;
+    background-color: transparent; /* Asegura que el fondo del enlace sea transparente */
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 70%; /* Asegúrate de que el submenú se despliegue justo debajo del item del menú */
+    left: 0;
+    background-color: transparent !important; /* Fuerza el fondo a ser transparente */
+    color: black; /* Establece el color de la fuente a negro */
+    border: none; /* Opcional: elimina cualquier borde que pueda tener el submenú */
+    z-index: 1000; /* Asegura que el submenú esté por encima de otros elementos */
+}
+
+.submenu a {
+    color: black !important; /* Fuerza el color de la fuente de los enlaces a negro */
+    text-decoration: none; /* Elimina cualquier subrayado de los enlaces */
+    padding: 5px 10px; /* Ajusta el relleno de los enlaces para mejorar la apariencia */
+    display: block; /* Hace que los enlaces del submenú ocupen toda la línea */
+}
+
+/* Muestra el submenú cuando el usuario pasa el cursor sobre el item del menú */
+.menu-item:hover .submenu {
+    display: block;
+}
+
+.video-embed {
+    display: block;
+    margin: 0 auto;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.grid-item {
+    margin: 10px; /* Espacio entre las imágenes */
+}
+
+.dark #header-wrap:not(.not-dark) .menu-container > .menu-item > .menu-link,
+    #header.sticky-header:not(.static-sticky) .menu-container > .menu-item.bg-color > .menu-link { color: #FFF; }
+
+    .dark #header-wrap:not(.not-dark) .menu-container > .menu-item.bg-color {
+        margin-left: 10px;
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;
+    }
